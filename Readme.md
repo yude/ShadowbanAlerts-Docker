@@ -1,5 +1,27 @@
-
 # ShadowbanAlerts
+
+`docker-compose.yml`
+```yml
+version: '3.8'
+
+services:
+  app:
+    image: ghcr.io/iamtakagi/shadowban-alerts
+    container_name: shadowban-alerts
+    volumes:
+      - type: bind
+        source: './crontab'
+        target: '/app/crontab'
+      - type: bind
+        source: './ShadowbanAlerts.json'
+        target: '/app/ShadowbanAlerts.json'
+    build:
+      context: .
+    environment:
+      - TZ=Asia/Tokyo
+      - SCREEN_NAMES=@yousuck2020,@kskgroup2017
+      - WEBHOOK_URL=https://discord.com/api/webhooks/xxx/xxx
+```
 
 Twitter アカウントへのシャドウバンが開始・解除された時に Discord に通知するツールです。
 
