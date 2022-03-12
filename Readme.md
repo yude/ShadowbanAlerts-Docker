@@ -1,5 +1,6 @@
 # ShadowbanAlerts
 
+## Install with Docker
 `docker-compose.yml`
 ```yml
 version: '3.8'
@@ -15,8 +16,6 @@ services:
       - type: bind
         source: './ShadowbanAlerts.json'
         target: '/app/ShadowbanAlerts.json'
-    build:
-      context: .
     environment:
       - TZ=Asia/Tokyo
       - SCREEN_NAMES=@yousuck2020,@kskgroup2017
