@@ -1,12 +1,10 @@
 # ShadowbanAlerts
 
-## Install with Docker
-
 See a [example](./example/) directory.
 
 `docker-compose.yml`
 ```yml
-version: '3.8'
+version: '3.9'
 
 services:
   app:
