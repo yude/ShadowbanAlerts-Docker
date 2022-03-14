@@ -2,7 +2,7 @@ version: '3.9'
 
 services:
   app:
-    image: ghcr.io/iamtakagi/shadowban-alerts
+    image: ghcr.io/iamtakagi/shadowban-alerts:latest
     container_name: shadowban-alerts
     volumes:
       - type: bind
