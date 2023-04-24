@@ -14,6 +14,6 @@ services:
         target: '/app/ShadowbanAlerts.json'
     environment:
       - TZ=Asia/Tokyo
-      - SCREEN_NAMES=@yude_jp
+      - SCREEN_NAMES=@yousuck2020
       # - MENTION_TO=
-      - WEBHOOK_URL=https://discord.com/api/webhooks/952867275034218526/793zEgHF5A3T6IFYrdmtXvX_ZZALRi2CAilzqdGsLDt41XMT7s6KsjjxAuvsYs2Qn0Jp
+      - WEBHOOK_URL=
