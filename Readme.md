@@ -10,7 +10,7 @@ version: '3.9'
 
 services:
   app:
-    image: ghcr.io/yude/shadowban-alerts:master
+    image: ghcr.io/yude/shadowbanalerts-docker:master
     container_name: shadowban-alerts
     build: .
     volumes:
