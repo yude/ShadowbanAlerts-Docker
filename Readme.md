@@ -10,19 +10,18 @@ version: '3.9'
 
 services:
   app:
-    image: ghcr.io/iamtakagi/shadowban-alerts:latest
+    image: ghcr.io/yude/shadowban-alerts:latest
     container_name: shadowban-alerts
+    build: .
     volumes:
-      - type: bind
-        source: './crontab'
-        target: '/app/crontab'
       - type: bind
         source: './ShadowbanAlerts.json'
         target: '/app/ShadowbanAlerts.json'
     environment:
       - TZ=Asia/Tokyo
-      - SCREEN_NAMES=@yousuck2020,@kskgroup2017
-      - WEBHOOK_URL=https://discord.com/api/webhooks/xxx/xxx
+      - SCREEN_NAMES=@yousuck2020
+      # - MENTION_TO=
+      - WEBHOOK_URL=
 ```
 
 ---
