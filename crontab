@@ -1,1 +1,1 @@
-* * * * * cd /app; python ShadowbanAlerts.py
+*/1 * * * * cd /app; pipenv run python ShadowbanAlerts.py

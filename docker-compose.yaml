@@ -1,0 +1,19 @@
+version: '3.9'
+
+services:
+  app:
+    image: ghcr.io/yude/shadowban-alerts:latest
+    container_name: shadowban-alerts
+    build: .
+    volumes:
+      - type: bind
+        source: './crontab'
+        target: '/app/crontab'
+      - type: bind
+        source: './ShadowbanAlerts.json'
+        target: '/app/ShadowbanAlerts.json'
+    environment:
+      - TZ=Asia/Tokyo
+      - SCREEN_NAMES=@yude_jp
+      # - MENTION_TO=
+      - WEBHOOK_URL=https://discord.com/api/webhooks/952867275034218526/793zEgHF5A3T6IFYrdmtXvX_ZZALRi2CAilzqdGsLDt41XMT7s6KsjjxAuvsYs2Qn0Jp
